@@ -14,7 +14,7 @@ stdimage-serializer
 With the stdimage-serializer you can easily show all the variations that you have set up with your std image object. For instance when we have the following field setup in our model:
 
 ```python
-image = StdImageField(upload_to='logos/', blank=True, 
+image = StdImageField(upload_to='images/', blank=True, 
 variations={
     'large': (600, 400),
     'thumbnail': (100, 100, True),
@@ -30,10 +30,10 @@ image = StdImageField()
 Ahh Voila! You will get the following return object in the Django Rest Framework:
 ```json
 "image": {
-        "large": "https://yourdomain.com/path/to/image/image.large.png",
-        "medium": "https://yourdomain.com/path/to/image/image.medium.png",
-        "thumbnail": "https://yourdomain.com/path/to/image/image.thumbnail.png",
-        "original": "https://yourdomain.com/path/to/image/image.png"
+        "large": "https://yourdomain.com/path/to/images/image.large.png",
+        "medium": "https://yourdomain.com/path/to/images/image.medium.png",
+        "thumbnail": "https://yourdomain.com/path/to/images/image.thumbnail.png",
+        "original": "https://yourdomain.com/path/to/images/image.png"
     }
 ```
 __NOTE:__ original is added, this is the normal url you would receive
