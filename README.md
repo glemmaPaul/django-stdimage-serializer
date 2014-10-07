@@ -24,6 +24,8 @@ variations={
 
 We can easily show all the variations in a request. Just add the following code to your serializer object:
 ```python
+from stdimage_serializer.fields import StdImageField
+
 image = StdImageField()
 ```
 
