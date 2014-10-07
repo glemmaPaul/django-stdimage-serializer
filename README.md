@@ -30,10 +30,10 @@ image = StdImageField()
 Ahh Voila! You will get the following return object in the Django Rest Framework:
 ```json
 "image": {
-        "large": "https://reservatebucket.s3.amazonaws.com/logos/Screenshot_0_6.large.png",
-        "medium": "https://reservatebucket.s3.amazonaws.com/logos/Screenshot_0_6.medium.png",
-        "thumbnail": "https://reservatebucket.s3.amazonaws.com/logos/Screenshot_0_6.thumbnail.png",
-        "original": "https://reservatebucket.s3.amazonaws.com/logos/Screenshot_0_6.png"
+        "large": "https://yourdomain.com/path/to/image/image.large.png",
+        "medium": "https://yourdomain.com/path/to/image/image.medium.png",
+        "thumbnail": "https://yourdomain.com/path/to/image/image.thumbnail.png",
+        "original": "https://yourdomain.com/path/to/image/image.png"
     }
 ```
 __NOTE:__ original is added, this is the normal url you would receive
