@@ -6,7 +6,7 @@ stdimage-serializer
   ```python
   pip install django-stdimage-serializer
   ```
-2. Add it to your stdimage-serializer in the INSTALLED_APPS
+2. Add ```stdimage_serializer``` in your INSTALLED_APPS
 
 
 ## Usage
