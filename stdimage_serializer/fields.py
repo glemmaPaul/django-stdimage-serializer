@@ -7,6 +7,9 @@ class StdImageField(serializers.ImageField):
     def to_native(self, obj):
         return self.get_variations_urls(obj)
 
+    def to_representation(self, obj):
+        return self.get_variations_urls(obj)
+
     def get_variations_urls(self, obj):
     	""" 
     	Get all the logo urls.
