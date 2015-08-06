@@ -33,16 +33,13 @@ class StdImageField(serializers.ImageField):
                 if hasattr(obj, key):
                     # get the by stdimage properties
                     field_obj = getattr(obj, key, None)
-                    if field_obj:
-                        # Check if there is an url
-                        url = getattr(field_obj, 'url', None)
-                    if url:
+                    if field_obj and hasattr(field_obj, 'url'):
                         # store it, with the name of the variation type into our return object
-                        return_object[key] = url
+                        return_object[key] = super(StdImageField, self).to_representation(field_obj)
 
         # Also include the original (if possible)
         if hasattr(obj, 'url'):
-            return_object['original'] = obj.url
+            return_object['original'] = super(StdImageField, self).to_representation(obj)
 
         return return_object
 
